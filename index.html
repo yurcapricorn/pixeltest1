@@ -15,6 +15,20 @@
         var n = d.getElementsByTagName("script")[0],
             s = d.createElement("script"),
             f = function () { n.parentNode.insertBefore(s, n); };
+
+				if (typeof order_id != "undefined") {
+					var i = setInterval(function(){
+						if (typeof w.bsrCnt4377 != "undefined") {
+							bsrCnt4377.goal("Thanks JS", {orderId: order_id});
+							clearInterval(i);
+
+var url = 'https://ubrr.banksravni.ru/pixel?ref='+document.referrer+'&uri='+document.documentURI+'&order_id='+order_id;
+$.get(url);
+                        }
+					},200)
+				}
+			};
+
         s.type = "text/javascript";
         s.async = true;
         s.src = "https://mc.yandex.ru/metrika/watch.js";
